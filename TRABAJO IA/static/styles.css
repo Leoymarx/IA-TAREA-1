@@ -1,0 +1,73 @@
+/* Fondo dinámico */
+@keyframes colorChange {
+    0% { background-color: #ffadad; }
+    25% { background-color: #ffd6a5; }
+    50% { background-color: #fdffb6; }
+    75% { background-color: #caffbf; }
+    100% { background-color: #9bf6ff; }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    animation: colorChange 10s infinite;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    margin: 20px 0;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="number"], input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+p {
+    font-size: 18px;
+    color: #333;
+}

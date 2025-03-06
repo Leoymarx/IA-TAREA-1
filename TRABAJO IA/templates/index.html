@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios en Python</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Ejercicios en Python con Flask</h1>
+        
+        <!-- Ejercicio 1: Aumento de Sueldo -->
+        <form method="POST">
+            <label for="sueldo">Ingrese su sueldo:</label>
+            <input type="number" id="sueldo" name="sueldo" required>
+            <button type="submit">Calcular Aumento</button>
+        </form>
+        {% if 'ejercicio1' in resultados %}
+            <p>{{ resultados['ejercicio1'] }}</p>
+        {% endif %}
+
+        <!-- Ejercicio 2: Descuento Parque -->
+        <form method="POST">
+            <label for="edad">Ingrese la edad:</label>
+            <input type="number" id="edad" name="edad" required>
+            <button type="submit">Calcular Precio</button>
+        </form>
+        {% if 'ejercicio2' in resultados %}
+            <p>{{ resultados['ejercicio2'] }}</p>
+        {% endif %}
+
+        <!-- Ejercicio 3: Descuento Tienda -->
+        <form method="POST">
+            <label for="mes">Ingrese el mes:</label>
+            <input type="text" id="mes" name="mes" required>
+            <label for="importe">Ingrese el importe:</label>
+            <input type="number" id="importe" name="importe" required>
+            <button type="submit">Calcular Descuento</button>
+        </form>
+        {% if 'ejercicio3' in resultados %}
+            <p>{{ resultados['ejercicio3'] }}</p>
+        {% endif %}
+
+        <!-- Ejercicio 4: Validar Número Menor que 10 -->
+        <form method="POST">
+            <label for="numero4">Ingrese un número:</label>
+            <input type="number" id="numero4" name="numero4" required>
+            <button type="submit">Validar Número</button>
+        </form>
+        {% if 'ejercicio4' in resultados %}
+            <p>{{ resultados['ejercicio4'] }}</p>
+        {% endif %}
+
+        <!-- Ejercicio 5: Validar Rango (0, 20) -->
+        <form method="POST">
+            <label for="numero5">Ingrese un número:</label>
+            <input type="number" id="numero5" name="numero5" required>
+            <button type="submit">Validar Rango</button>
+        </form>
+        {% if 'ejercicio5' in resultados %}
+            <p>{{ resultados['ejercicio5'] }}</p>
+        {% endif %}
+
+        <!-- Ejercicio 6: Contar intentos -->
+        <form method="POST">
+            <label for="numero6">Ingrese un número:</label>
+            <input type="number" id="numero6" name="numero6" required>
+            <input type="hidden" name="intentos" value="{{ intentos }}">
+            <button type="submit">Contar Intentos</button>
+        </form>
+        {% if 'ejercicio6' in resultados %}
+            <p>{{ resultados['ejercicio6'][0] }}</p>
+            <p>Intentos: {{ resultados['ejercicio6'][1] }}</p>
+        {% endif %}
+
+        <!-- Ejercicio 7: Sumar los primeros n números -->
+        <form method="POST">
+            <label for="n">Ingrese el valor de n:</label>
+            <input type="number" id="n" name="n" required>
+            <button type="submit">Calcular Suma</button>
+        </form>
+        {% if 'ejercicio7' in resultados %}
+            <p>{{ resultados['ejercicio7'] }}</p>
+        {% endif %}
+
+        <!-- Ejercicio 8: Sumar hasta que se ingrese 0 -->
+        <form method="POST">
+            <label for="numero8">Ingrese un número:</label>
+            <input type="number" id="numero8" name="numero8" required>
+            <button type="submit">Sumar</button>
+        </form>
+        {% if 'ejercicio8' in resultados %}
+            <p>{{ resultados['ejercicio8'] }}</p>
+        {% endif %}
+
+        <!-- Ejercicio 9: Sumar hasta que la suma sea mayor a 100 -->
+        <form method="POST">
+            <label for="numero9">Ingrese un número:</label>
+            <input type="number" id="numero9" name="numero9" required>
+            <button type="submit">Sumar</button>
+        </form>
+        {% if 'ejercicio9' in resultados %}
+            <p>{{ resultados['ejercicio9'] }}</p>
+        {% endif %}
+
+        <!-- Ejercicio 10: Calcular Pago por Horas -->
+        <form method="POST">
+            <label for="horas_normales">Horas normales:</label>
+            <input type="number" id="horas_normales" name="horas_normales" required>
+            <label for="horas_extras">Horas extras:</label>
+            <input type="number" id="horas_extras" name="horas_extras" required>
+            <label for="hijos">Número de hijos:</label>
+            <input type="number" id="hijos" name="hijos" required>
+            <button type="submit">Calcular Pago</button>
+        </form>
+        {% if 'ejercicio10' in resultados %}
+            <p>{{ resultados['ejercicio10'] }}</p>
+        {% endif %}
+    </div>
+
+</body>
+</html>
